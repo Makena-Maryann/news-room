@@ -14,6 +14,7 @@ def get_sources():
     '''
     get_sources_url = base_url.format(api_key)
 
+    
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)

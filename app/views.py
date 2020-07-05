@@ -11,7 +11,7 @@ def index():
     
     news_sources = get_sources()
     print(news_sources)
-    title = 'Home - Verified news source'
+    title = 'Home - Verified news sources'
     return render_template('index.html',title = title,sources = news_sources) 
 
 @app.route('/source/<int:source_id>')

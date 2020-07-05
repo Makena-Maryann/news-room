@@ -15,6 +15,9 @@
  <ul>
      {% for news_source in sources %}
          <li>{{ news_source.name }}</li>
+         <li>{{ news_source.country}}</li>
+         <li>{{ news_source.description}}</li>
+         <li><a href="{{ news_source.url}}" target="_blank">Visit home page</a></li>
      {% endfor %}
  </ul>
  

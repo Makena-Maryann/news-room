@@ -14,7 +14,7 @@ def index():
     title = 'Home - Verified news sources'
     return render_template('index.html',title = title,sources = news_sources) 
 
-@app.route('/source/<int:source_id>')
+@app.route('/source/<source_id>')
 def source(source_id):
     '''
     View source page function that returns the articles page and its data

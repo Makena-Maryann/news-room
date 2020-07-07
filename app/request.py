@@ -6,13 +6,15 @@ Source = source.Source
 
 api_key = app.config['NEWS_API_KEY']
 
-base_url = app.config["NEWS_API_BASE_URL"]
+source_url = app.config[" NEWS_API_SOURCE_URL"]
+
+articles_url = app.config["NEWS_API_ARTICLES_URL "]
 
 def get_sources():
     '''
     Function that gets the json response to our url request
     '''
-    get_sources_url = base_url.format(api_key)
+    get_sources_url = source_url.format(api_key)
 
     
     with urllib.request.urlopen(get_sources_url) as url:

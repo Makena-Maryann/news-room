@@ -27,7 +27,7 @@ class ArticleTest(unittest.TestCase):
         self.assertEqual(self.new_article.image,'https://s.abcnews.com/images/US/WireAP_bf8cec6afa1d4c5e99f80f3b6143e126_16x9_992.jpg')
         self.assertEqual(self.new_article.description,'A custom casket is being built for the funeral of the world’s longest-surviving conjoined twins, who died July 4 in Ohio of natural causes')
         self.assertEqual(self.new_article.time,'2020-07-07T17:48:32Z')
-        self.assertEqual(self.new_article.url,'https://abcnews.go.com/US/wireStory/brother-longest-surviving-conjoined-twins-made-68-71653548')
+        self.assertEqual(self.new_article.main_page_url,'https://abcnews.go.com/US/wireStory/brother-longest-surviving-conjoined-twins-made-68-71653548')
         
                
 if __name__=='__main__':

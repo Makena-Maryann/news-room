@@ -7,9 +7,9 @@ Article = article.Article
 
 api_key = app.config['NEWS_API_KEY']
 
-source_url = app.config[" NEWS_API_SOURCE_URL"]
+source_url = app.config["NEWS_API_SOURCE_URL"]
 
-articles_url = app.config["NEWS_API_ARTICLES_URL "]
+articles_url = app.config["NEWS_API_ARTICLES_URL"]
 
 def get_sources():
     '''

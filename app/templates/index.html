@@ -2,13 +2,13 @@
 
 {% block content %}
 <h3>News Sources</h3>
- <ul>
-     {% for news_source in sources %}
-         <li>{{ news_source.name }}</li>
+
+ {% for news_source in sources %}
+ <div class="col-md-3 card">
+    <li>{{ news_source.name }}</li>
          <li>{{ news_source.country}}</li>
-         <li>{{ news_source.description}}</li>
+         <li>{{ news_source.description|truncate(100)}}</li>
          <li><a href="{{ news_source.url}}" target="_blank">Visit home page</a></li>
-     {% endfor %}
- </ul>
- 
+</div>
+{% endfor %}
 {% endblock %}

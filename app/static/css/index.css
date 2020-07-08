@@ -4,3 +4,8 @@
  color: orange;
  border-radius: 2px;
 }
+
+li{
+display: inline-block;
+text-decoration: none;
+}

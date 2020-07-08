@@ -5,7 +5,7 @@
  
     {% for news_article in articles %}
         
-        <div class="col-md-3 card">
+        <div class="col-md-3 article-card">
             <img src="{{ news_article.image }}" alt="Article specific image" class="img-responsive">
             <p>{{ news_article.description|truncate(100)}}</p>
             <p>{{ news_article.time}} </p>

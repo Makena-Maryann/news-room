@@ -1,0 +1,9 @@
+.article-card {
+ border: 2px solid grey;
+ border-radius: 2px;
+}
+
+li{
+ display: inline-block;
+ text-decoration: none;
+ }

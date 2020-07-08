@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
+{% block styles %}
+     {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+    
 {% block content %}
 <h3>News Sources</h3>
-
- {% for news_source in sources %}
- <div class="col-md-3 card">
+{% for news_source in sources %}
+ <div class="col-md-3 source-card">
     <li>{{ news_source.name }}</li>
          <li>{{ news_source.country}}</li>
          <li>{{ news_source.description|truncate(100)}}</li>
          <li><a href="{{ news_source.url}}" target="_blank">Visit home page</a></li>
-</div>
+ </div>
 {% endfor %}
 {% endblock %}

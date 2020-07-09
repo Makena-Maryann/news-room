@@ -1,3 +1,6 @@
+import os
+
+
 class Config:
     '''
     General configuration parent class
@@ -6,7 +9,9 @@ class Config:
 
     NEWS_API_ARTICLES_URL ='https://newsapi.org/v2/everything?sources={}&apiKey={}'
 
-class prodConfig(Config):
+    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+
+class ProdConfig(Config):
     '''
     Production configuration child class
 
@@ -22,4 +27,9 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
         '''
-    DEBUG = True          
+    DEBUG = True 
+
+config_options = {
+    'development':DevConfig,
+    'production':ProdConfig
+}             

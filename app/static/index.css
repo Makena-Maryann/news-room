@@ -2,12 +2,14 @@
  background-color: rgb(0, 0, 0);
  border: 1px solid orange;
  color: white;
- border-radius: 50%;
+ border-radius: 10px;
 }
 
 li{
 display: inline-block;
 text-decoration: none;
 }
-
+a:hover {
+color: yellow;
+}
  

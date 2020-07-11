@@ -13,13 +13,13 @@ def index():
     title = 'Home - Verified news sources'
     return render_template('index.html',title = title,sources = news_sources) 
 
-@main.route('/articles')
-def articles():
+@main.route('/articles/<id>')
+def articles(id):
     '''
     View source page function that returns the articles page and its data
     '''
     #Getting articles from a specific source
-    news_articles = get_articles('bbc-news')
+    news_articles = get_articles(id)
     print(news_articles)
     title = 'Latest news from verified sources'
     return render_template('articles.html', title = title, articles = news_articles)

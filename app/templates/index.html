@@ -6,13 +6,16 @@
 {% endblock %}
     
 {% block content %}
-<h3>News Sources</h3>
+<h1 class="text-center">News Sources</h1>
 {% for news_source in sources %}
- <div class="col-md-3 source-card">
-    <li>{{ news_source.name }}</li>
-         <li>{{ news_source.country}}</li>
-         <li>{{ news_source.description|truncate(100)}}</li>
-         <li><a href="{{ news_source.url}}" target="_blank">Visit home page</a></li>
- </div>
+ <div class="card col-md-3 source-card ">
+    <div class="card-body">
+        <h5 class="card-title text-center text-primary text-uppercase">{{ news_source.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ news_source.country}}</h6>
+        <p class="card-text">{{ news_source.description|truncate(100)}}</p>
+        <a href="/articles/{{news_source.id}}" class="card-link pr-5">View Articles</a>
+        <a href="{{ news_source.url}}" class="card-link" target="_blank">Visit home page</a>
+    </div>
+  </div>
 {% endfor %}
 {% endblock %}

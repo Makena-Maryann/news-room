@@ -9,10 +9,6 @@ background-color: teal;
  border-radius: 10px;
 }
 
-li{
-display: inline-block;
-text-decoration: none;
-}
 a:hover {
 color: red;
 }
